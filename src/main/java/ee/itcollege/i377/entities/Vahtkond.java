@@ -27,7 +27,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooEntity
-public class Vahtkond implements Serializable {
+public class Vahtkond extends HistoryHandlerEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -39,36 +39,16 @@ public class Vahtkond implements Serializable {
     @DateTimeFormat(style="M-")
 	private Date alates;
 
-	private String avaja;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date avatud;
-
-	private String kommentaar;
-
 	private String kood;
 
     @Temporal( TemporalType.DATE)
     @DateTimeFormat(style="M-")
 	private Date kuni;
 
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date muudetud;
-
-	private String muutja;
-
 	private String nimetus;
 
 	@Column(name="PIIRIPUNKT_ID")
 	private int piiripunktId;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date suletud;
-
-	private String sulgeja;
 
 	@Column(name="VAEOSA_ID_ID")
 	private int vaeosaIdId;
@@ -100,29 +80,6 @@ public class Vahtkond implements Serializable {
 		this.alates = alates;
 	}
 
-	public String getAvaja() {
-		return this.avaja;
-	}
-
-	public void setAvaja(String avaja) {
-		this.avaja = avaja;
-	}
-
-	public Date getAvatud() {
-		return this.avatud;
-	}
-
-	public void setAvatud(Date avatud) {
-		this.avatud = avatud;
-	}
-
-	public String getKommentaar() {
-		return this.kommentaar;
-	}
-
-	public void setKommentaar(String kommentaar) {
-		this.kommentaar = kommentaar;
-	}
 
 	public String getKood() {
 		return this.kood;
@@ -138,22 +95,6 @@ public class Vahtkond implements Serializable {
 
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
-	}
-
-	public Date getMuudetud() {
-		return this.muudetud;
-	}
-
-	public void setMuudetud(Date muudetud) {
-		this.muudetud = muudetud;
-	}
-
-	public String getMuutja() {
-		return this.muutja;
-	}
-
-	public void setMuutja(String muutja) {
-		this.muutja = muutja;
 	}
 
 	public String getNimetus() {
@@ -172,21 +113,6 @@ public class Vahtkond implements Serializable {
 		this.piiripunktId = piiripunktId;
 	}
 
-	public Date getSuletud() {
-		return this.suletud;
-	}
-
-	public void setSuletud(Date suletud) {
-		this.suletud = suletud;
-	}
-
-	public String getSulgeja() {
-		return this.sulgeja;
-	}
-
-	public void setSulgeja(String sulgeja) {
-		this.sulgeja = sulgeja;
-	}
 
 	public int getVaeosaIdId() {
 		return this.vaeosaIdId;

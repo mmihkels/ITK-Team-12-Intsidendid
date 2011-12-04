@@ -3,6 +3,7 @@
 
 package ee.itcollege.team12.web;
 
+import ee.itcollege.i377.entities.IsikIntsidendi;
 import ee.itcollege.i377.entities.Kodakondsus;
 import ee.itcollege.i377.entities.Objekt;
 import ee.itcollege.i377.entities.Piiririkkuja;
@@ -94,6 +95,11 @@ privileged aspect PiiririkkujaController_Roo_Controller {
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/piiririkkujas";
+    }
+    
+    @ModelAttribute("isikintsidendis")
+    public Collection<IsikIntsidendi> PiiririkkujaController.populateIsikIntsidendis() {
+        return IsikIntsidendi.findAllIsikIntsidendis();
     }
     
     @ModelAttribute("kodakondsuses")

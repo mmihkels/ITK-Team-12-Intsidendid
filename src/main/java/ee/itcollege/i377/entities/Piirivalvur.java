@@ -1,7 +1,6 @@
 package ee.itcollege.i377.entities;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -10,14 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
-
 
 /**
  * The persistent class for the PIIRIVALVUR database table.
@@ -27,51 +22,31 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooEntity
-public class Piirivalvur implements Serializable {
+public class Piirivalvur extends HistoryHandlerEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="PIIRIVALVUR_ID")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "PIIRIVALVUR_ID")
 	private Long piirivalvurId;
-
-	private String avaja;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date avatud;
 
 	private String eesnimed;
 
 	private String isikukood;
 
-	private String kommentaar;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date muudetud;
-
-	private String muutja;
-
 	private String perekonnanimi;
 
-	@Column(name="SODURI_KOOD")
+	@Column(name = "SODURI_KOOD")
 	private String soduriKood;
 
 	private String sugu;
 
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date suletud;
-
-	private String sulgeja;
-
-	//bi-directional many-to-one association to PiirivalvurIntsidendi
-	@OneToMany(mappedBy="piirivalvur")
+	// bi-directional many-to-one association to PiirivalvurIntsidendi
+	@OneToMany(mappedBy = "piirivalvur")
 	private Set<PiirivalvurIntsidendi> piirivalvurIntsidendis;
 
-    public Piirivalvur() {
-    }
+	public Piirivalvur() {
+	}
 
 	public Long getPiirivalvurId() {
 		return this.piirivalvurId;
@@ -79,22 +54,6 @@ public class Piirivalvur implements Serializable {
 
 	public void setPiirivalvurId(Long piirivalvurId) {
 		this.piirivalvurId = piirivalvurId;
-	}
-
-	public String getAvaja() {
-		return this.avaja;
-	}
-
-	public void setAvaja(String avaja) {
-		this.avaja = avaja;
-	}
-
-	public Date getAvatud() {
-		return this.avatud;
-	}
-
-	public void setAvatud(Date avatud) {
-		this.avatud = avatud;
 	}
 
 	public String getEesnimed() {
@@ -111,30 +70,6 @@ public class Piirivalvur implements Serializable {
 
 	public void setIsikukood(String isikukood) {
 		this.isikukood = isikukood;
-	}
-
-	public String getKommentaar() {
-		return this.kommentaar;
-	}
-
-	public void setKommentaar(String kommentaar) {
-		this.kommentaar = kommentaar;
-	}
-
-	public Date getMuudetud() {
-		return this.muudetud;
-	}
-
-	public void setMuudetud(Date muudetud) {
-		this.muudetud = muudetud;
-	}
-
-	public String getMuutja() {
-		return this.muutja;
-	}
-
-	public void setMuutja(String muutja) {
-		this.muutja = muutja;
 	}
 
 	public String getPerekonnanimi() {
@@ -161,28 +96,13 @@ public class Piirivalvur implements Serializable {
 		this.sugu = sugu;
 	}
 
-	public Date getSuletud() {
-		return this.suletud;
-	}
-
-	public void setSuletud(Date suletud) {
-		this.suletud = suletud;
-	}
-
-	public String getSulgeja() {
-		return this.sulgeja;
-	}
-
-	public void setSulgeja(String sulgeja) {
-		this.sulgeja = sulgeja;
-	}
-
 	public Set<PiirivalvurIntsidendi> getPiirivalvurIntsidendis() {
 		return this.piirivalvurIntsidendis;
 	}
 
-	public void setPiirivalvurIntsidendis(Set<PiirivalvurIntsidendi> piirivalvurIntsidendis) {
+	public void setPiirivalvurIntsidendis(
+			Set<PiirivalvurIntsidendi> piirivalvurIntsidendis) {
 		this.piirivalvurIntsidendis = piirivalvurIntsidendis;
 	}
-	
+
 }

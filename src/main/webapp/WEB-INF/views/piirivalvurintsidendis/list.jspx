@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_entities_PiirivalvurIntsidendi" items="${piirivalvurintsidendis}" z="RJnYdnJpoyVGlidXWEJFIUEwYFE=">
         <table:table data="${piirivalvurintsidendis}" id="l_ee_itcollege_i377_entities_PiirivalvurIntsidendi" path="/piirivalvurintsidendis" typeIdFieldName="piirivalvurIntsidendisId" z="GLR24ACo8I1nk7mJ7CHvEQ5sWMQ=">
-            <table:column date="true" dateTimePattern="${piirivalvurIntsidendi_alates_date_format}" id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_alates" property="alates" z="vSkWrRb1HD+r2AXf5oxRgpfDoEw="/>
             <table:column id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_avaja" property="avaja" z="lqDqTcHwoJU8Y4mio+g8GCo8uJ0="/>
             <table:column date="true" dateTimePattern="${piirivalvurIntsidendi_avatud_date_format}" id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_avatud" property="avatud" z="URX6rHvFI9BEGl1UtKY49Qkct1Q="/>
-            <table:column id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_kirjeldus" property="kirjeldus" z="ZdVew/cFuuR8QKY0pJCvYg3jIW4="/>
-            <table:column id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_kommentaar" property="kommentaar" z="yqRvz5v1mqR1mMsxVr1vv+VjjeE="/>
-            <table:column date="true" dateTimePattern="${piirivalvurIntsidendi_kuni_date_format}" id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_kuni" property="kuni" z="0Gh69vHylXb/khL+ADfnFMCPSzU="/>
+            <table:column date="true" dateTimePattern="${piirivalvurIntsidendi_muudetud_date_format}" id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_muudetud" property="muudetud" z="dXiK11/sDfN4XUIESMA+24KLh8k="/>
+            <table:column id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_muutja" property="muutja" z="x2C58RAYjtgQJX7KFYgfZIfX3iI="/>
+            <table:column date="true" dateTimePattern="${piirivalvurIntsidendi_suletud_date_format}" id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_suletud" property="suletud" z="5SF0nCyVCbMwig1qH4aVH8uzVlo="/>
+            <table:column id="c_ee_itcollege_i377_entities_PiirivalvurIntsidendi_sulgeja" property="sulgeja" z="MWDSPLLco1bo+JEpDYDpEwQ824E="/>
         </table:table>
     </page:list>
 </div>

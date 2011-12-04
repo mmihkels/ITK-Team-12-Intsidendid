@@ -118,11 +118,11 @@ privileged aspect PiirivalvurIntsidendiController_Roo_Controller {
     }
     
     void PiirivalvurIntsidendiController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("piirivalvurIntsidendi_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("piirivalvurIntsidendi_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("piirivalvurIntsidendi_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("piirivalvurIntsidendi_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("piirivalvurIntsidendi_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("piirivalvurIntsidendi_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("piirivalvurIntsidendi_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String PiirivalvurIntsidendiController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

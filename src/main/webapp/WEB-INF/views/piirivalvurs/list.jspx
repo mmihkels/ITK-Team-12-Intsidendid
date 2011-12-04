@@ -6,10 +6,10 @@
         <table:table data="${piirivalvurs}" id="l_ee_itcollege_i377_entities_Piirivalvur" path="/piirivalvurs" typeIdFieldName="piirivalvurId" z="7nabX5h/0WFumdZ1DvZshD3V+ew=">
             <table:column id="c_ee_itcollege_i377_entities_Piirivalvur_avaja" property="avaja" z="9ciiaGQJnPu8wcvToseJ5qsNUyA="/>
             <table:column date="true" dateTimePattern="${piirivalvur_avatud_date_format}" id="c_ee_itcollege_i377_entities_Piirivalvur_avatud" property="avatud" z="cEybXmWqYeosvh1u48x1nAaQF4E="/>
-            <table:column id="c_ee_itcollege_i377_entities_Piirivalvur_eesnimed" property="eesnimed" z="IZu0SsAeZXEEzdPPLs+d0jQsQnM="/>
-            <table:column id="c_ee_itcollege_i377_entities_Piirivalvur_isikukood" property="isikukood" z="CRF/K46V9x1yV+a8eXvDOjvPeiw="/>
-            <table:column id="c_ee_itcollege_i377_entities_Piirivalvur_kommentaar" property="kommentaar" z="Rj93ZbK+hedtqUwCKYDBNtrBTrs="/>
             <table:column date="true" dateTimePattern="${piirivalvur_muudetud_date_format}" id="c_ee_itcollege_i377_entities_Piirivalvur_muudetud" property="muudetud" z="bgscUVzyIPCQ3ytIVXGJOXj4uhU="/>
+            <table:column id="c_ee_itcollege_i377_entities_Piirivalvur_muutja" property="muutja" z="zrVCEmsl8WFVQr14dJK6E/s0nBo="/>
+            <table:column date="true" dateTimePattern="${piirivalvur_suletud_date_format}" id="c_ee_itcollege_i377_entities_Piirivalvur_suletud" property="suletud" z="l+4oVmociFq1uFlThT3DN7WX53k="/>
+            <table:column id="c_ee_itcollege_i377_entities_Piirivalvur_sulgeja" property="sulgeja" z="JjWQnGQoSRCcXRBDL9ho6nqTJ0A="/>
         </table:table>
     </page:list>
 </div>

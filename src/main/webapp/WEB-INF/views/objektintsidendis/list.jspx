@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_entities_ObjektIntsidendi" items="${objektintsidendis}" z="R6wDeXgjOZxuXqDapxFLWylYnWc=">
         <table:table data="${objektintsidendis}" id="l_ee_itcollege_i377_entities_ObjektIntsidendi" path="/objektintsidendis" typeIdFieldName="objektIntsidendisId" z="DdgOqQTe/vBMRSVICtUHwvVpcuo=">
-            <table:column date="true" dateTimePattern="${objektIntsidendi_alates_date_format}" id="c_ee_itcollege_i377_entities_ObjektIntsidendi_alates" property="alates" z="eZ5+RumgSr8lSskFwUay0Yv/jhQ="/>
             <table:column id="c_ee_itcollege_i377_entities_ObjektIntsidendi_avaja" property="avaja" z="+tJehzoks5Mf+Z3YiNlUiIbMtYs="/>
             <table:column date="true" dateTimePattern="${objektIntsidendi_avatud_date_format}" id="c_ee_itcollege_i377_entities_ObjektIntsidendi_avatud" property="avatud" z="RSWY6T/N/EbIobRpAdF2wjqRm6I="/>
-            <table:column id="c_ee_itcollege_i377_entities_ObjektIntsidendi_kirjeldus" property="kirjeldus" z="bQaayhatcTOOHck75vhdfN9Mqgs="/>
-            <table:column id="c_ee_itcollege_i377_entities_ObjektIntsidendi_kommentaar" property="kommentaar" z="fb6asZHpFfDGtJiJEn8pQbDe5B0="/>
-            <table:column date="true" dateTimePattern="${objektIntsidendi_kuni_date_format}" id="c_ee_itcollege_i377_entities_ObjektIntsidendi_kuni" property="kuni" z="Im5mUZvXFOrsAzoG0aDEZWsGhhE="/>
+            <table:column date="true" dateTimePattern="${objektIntsidendi_muudetud_date_format}" id="c_ee_itcollege_i377_entities_ObjektIntsidendi_muudetud" property="muudetud" z="obi8/C8iNbxJYMunakDun0Aq7CQ="/>
+            <table:column id="c_ee_itcollege_i377_entities_ObjektIntsidendi_muutja" property="muutja" z="AD8Sf1eLmDJ5Y05xhwQD4nJ6jow="/>
+            <table:column date="true" dateTimePattern="${objektIntsidendi_suletud_date_format}" id="c_ee_itcollege_i377_entities_ObjektIntsidendi_suletud" property="suletud" z="jL3rFOzq/IUuyJOXDXz4bfTulS0="/>
+            <table:column id="c_ee_itcollege_i377_entities_ObjektIntsidendi_sulgeja" property="sulgeja" z="+fe46o9LI8vM45Z3+oxTTkCUAO8="/>
         </table:table>
     </page:list>
 </div>

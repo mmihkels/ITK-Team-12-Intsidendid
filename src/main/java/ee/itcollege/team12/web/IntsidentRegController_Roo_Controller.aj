@@ -29,37 +29,25 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
-privileged aspect IntsidentController_Roo_Controller {
-    
-    @RequestMapping(method = RequestMethod.POST)
-    public String IntsidentController.create(@Valid Intsident intsident, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("intsident", intsident);
-            addDateTimeFormatPatterns(uiModel);
-            return "intsidents/create";
-        }
-        uiModel.asMap().clear();
-        intsident.persist();
-        return "redirect:/intsidents/" + encodeUrlPathSegment(intsident.getIntsidentId().toString(), httpServletRequest);
-    }
+privileged aspect IntsidentRegController_Roo_Controller {
     
     @RequestMapping(params = "form", method = RequestMethod.GET)
-    public String IntsidentController.createForm(Model uiModel) {
+    public String IntsidentRegController.createForm(Model uiModel) {
         uiModel.addAttribute("intsident", new Intsident());
         addDateTimeFormatPatterns(uiModel);
-        return "intsidents/create";
+        return "intsidentreg/create";
     }
     
     @RequestMapping(value = "/{intsidentId}", method = RequestMethod.GET)
-    public String IntsidentController.show(@PathVariable("intsidentId") Long intsidentId, Model uiModel) {
+    public String IntsidentRegController.show(@PathVariable("intsidentId") Long intsidentId, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("intsident", Intsident.findIntsident(intsidentId));
         uiModel.addAttribute("itemId", intsidentId);
-        return "intsidents/show";
+        return "intsidentreg/show";
     }
     
     @RequestMapping(method = RequestMethod.GET)
-    public String IntsidentController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String IntsidentRegController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         if (page != null || size != null) {
             int sizeNo = size == null ? 10 : size.intValue();
             uiModel.addAttribute("intsidents", Intsident.findIntsidentEntries(page == null ? 0 : (page.intValue() - 1) * sizeNo, sizeNo));
@@ -69,73 +57,73 @@ privileged aspect IntsidentController_Roo_Controller {
             uiModel.addAttribute("intsidents", Intsident.findAllIntsidents());
         }
         addDateTimeFormatPatterns(uiModel);
-        return "intsidents/list";
+        return "intsidentreg/list";
     }
     
     @RequestMapping(method = RequestMethod.PUT)
-    public String IntsidentController.update(@Valid Intsident intsident, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String IntsidentRegController.update(@Valid Intsident intsident, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("intsident", intsident);
             addDateTimeFormatPatterns(uiModel);
-            return "intsidents/update";
+            return "intsidentreg/update";
         }
         uiModel.asMap().clear();
         intsident.merge();
-        return "redirect:/intsidents/" + encodeUrlPathSegment(intsident.getIntsidentId().toString(), httpServletRequest);
+        return "redirect:/intsidentreg/" + encodeUrlPathSegment(intsident.getIntsidentId().toString(), httpServletRequest);
     }
     
     @RequestMapping(value = "/{intsidentId}", params = "form", method = RequestMethod.GET)
-    public String IntsidentController.updateForm(@PathVariable("intsidentId") Long intsidentId, Model uiModel) {
+    public String IntsidentRegController.updateForm(@PathVariable("intsidentId") Long intsidentId, Model uiModel) {
         uiModel.addAttribute("intsident", Intsident.findIntsident(intsidentId));
         addDateTimeFormatPatterns(uiModel);
-        return "intsidents/update";
+        return "intsidentreg/update";
     }
     
     @RequestMapping(value = "/{intsidentId}", method = RequestMethod.DELETE)
-    public String IntsidentController.delete(@PathVariable("intsidentId") Long intsidentId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String IntsidentRegController.delete(@PathVariable("intsidentId") Long intsidentId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Intsident.findIntsident(intsidentId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
-        return "redirect:/intsidents";
+        return "redirect:/intsidentreg";
     }
     
     @ModelAttribute("intsidendiliiks")
-    public Collection<IntsidendiLiik> IntsidentController.populateIntsidendiLiiks() {
+    public Collection<IntsidendiLiik> IntsidentRegController.populateIntsidendiLiiks() {
         return IntsidendiLiik.findAllIntsidendiLiiks();
     }
     
     @ModelAttribute("intsidents")
-    public Collection<Intsident> IntsidentController.populateIntsidents() {
+    public Collection<Intsident> IntsidentRegController.populateIntsidents() {
         return Intsident.findAllIntsidents();
     }
     
     @ModelAttribute("isikintsidendis")
-    public Collection<IsikIntsidendi> IntsidentController.populateIsikIntsidendis() {
+    public Collection<IsikIntsidendi> IntsidentRegController.populateIsikIntsidendis() {
         return IsikIntsidendi.findAllIsikIntsidendis();
     }
     
     @ModelAttribute("objektintsidendis")
-    public Collection<ObjektIntsidendi> IntsidentController.populateObjektIntsidendis() {
+    public Collection<ObjektIntsidendi> IntsidentRegController.populateObjektIntsidendis() {
         return ObjektIntsidendi.findAllObjektIntsidendis();
     }
     
     @ModelAttribute("piiriloiks")
-    public Collection<Piiriloik> IntsidentController.populatePiiriloiks() {
+    public Collection<Piiriloik> IntsidentRegController.populatePiiriloiks() {
         return Piiriloik.findAllPiiriloiks();
     }
     
     @ModelAttribute("piirivalvurintsidendis")
-    public Collection<PiirivalvurIntsidendi> IntsidentController.populatePiirivalvurIntsidendis() {
+    public Collection<PiirivalvurIntsidendi> IntsidentRegController.populatePiirivalvurIntsidendis() {
         return PiirivalvurIntsidendi.findAllPiirivalvurIntsidendis();
     }
     
     @ModelAttribute("vahtkondintsidendis")
-    public Collection<VahtkondIntsidendi> IntsidentController.populateVahtkondIntsidendis() {
+    public Collection<VahtkondIntsidendi> IntsidentRegController.populateVahtkondIntsidendis() {
         return VahtkondIntsidendi.findAllVahtkondIntsidendis();
     }
     
-    void IntsidentController.addDateTimeFormatPatterns(Model uiModel) {
+    void IntsidentRegController.addDateTimeFormatPatterns(Model uiModel) {
         uiModel.addAttribute("intsident_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("intsident_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("intsident_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
@@ -143,7 +131,7 @@ privileged aspect IntsidentController_Roo_Controller {
         uiModel.addAttribute("intsident_toimumiselopp_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
-    String IntsidentController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
+    String IntsidentRegController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
         String enc = httpServletRequest.getCharacterEncoding();
         if (enc == null) {
             enc = WebUtils.DEFAULT_CHARACTER_ENCODING;

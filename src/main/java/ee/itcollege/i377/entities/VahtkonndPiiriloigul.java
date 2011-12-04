@@ -30,7 +30,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooEntity
 @Table(name="VAHTKONND_PIIRILOIGUL")
-public class VahtkonndPiiriloigul implements Serializable {
+public class VahtkonndPiiriloigul extends HistoryHandlerEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -41,30 +41,10 @@ public class VahtkonndPiiriloigul implements Serializable {
     @Temporal( TemporalType.DATE)
     @DateTimeFormat(style="M-")
 	private Date alates;
-
-	private String avaja;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date avatud;
-
-	private String kommentaar;
-
+    
     @Temporal( TemporalType.DATE)
     @DateTimeFormat(style="M-")
 	private Date kuni;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date muudetud;
-
-	private String muutja;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date suletud;
-
-	private String sulgeja;
 
 	//bi-directional many-to-one association to Piiriloik
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -95,30 +75,6 @@ public class VahtkonndPiiriloigul implements Serializable {
 		this.alates = alates;
 	}
 
-	public String getAvaja() {
-		return this.avaja;
-	}
-
-	public void setAvaja(String avaja) {
-		this.avaja = avaja;
-	}
-
-	public Date getAvatud() {
-		return this.avatud;
-	}
-
-	public void setAvatud(Date avatud) {
-		this.avatud = avatud;
-	}
-
-	public String getKommentaar() {
-		return this.kommentaar;
-	}
-
-	public void setKommentaar(String kommentaar) {
-		this.kommentaar = kommentaar;
-	}
-
 	public Date getKuni() {
 		return this.kuni;
 	}
@@ -127,37 +83,6 @@ public class VahtkonndPiiriloigul implements Serializable {
 		this.kuni = kuni;
 	}
 
-	public Date getMuudetud() {
-		return this.muudetud;
-	}
-
-	public void setMuudetud(Date muudetud) {
-		this.muudetud = muudetud;
-	}
-
-	public String getMuutja() {
-		return this.muutja;
-	}
-
-	public void setMuutja(String muutja) {
-		this.muutja = muutja;
-	}
-
-	public Date getSuletud() {
-		return this.suletud;
-	}
-
-	public void setSuletud(Date suletud) {
-		this.suletud = suletud;
-	}
-
-	public String getSulgeja() {
-		return this.sulgeja;
-	}
-
-	public void setSulgeja(String sulgeja) {
-		this.sulgeja = sulgeja;
-	}
 
 	public Piiriloik getPiiriloik() {
 		return this.piiriloik;

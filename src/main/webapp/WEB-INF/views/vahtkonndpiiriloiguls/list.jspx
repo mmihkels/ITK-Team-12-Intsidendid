@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_entities_VahtkonndPiiriloigul" items="${vahtkonndpiiriloiguls}" z="CkfWRyP5KGU8W2t36dOb51QuZP0=">
         <table:table data="${vahtkonndpiiriloiguls}" id="l_ee_itcollege_i377_entities_VahtkonndPiiriloigul" path="/vahtkonndpiiriloiguls" typeIdFieldName="vahtkondPiiriloiulId" z="7Dy0H8carqI+GYlEt7upRk8C4eU=">
-            <table:column date="true" dateTimePattern="${vahtkonndPiiriloigul_alates_date_format}" id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_alates" property="alates" z="H1H+kS3rNDkevBI7OnTTT5qQ4j4="/>
             <table:column id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_avaja" property="avaja" z="G80Vjn7RXyUqGkHNak8d6/uQp+M="/>
             <table:column date="true" dateTimePattern="${vahtkonndPiiriloigul_avatud_date_format}" id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_avatud" property="avatud" z="YgcChN/aKbovYMcljRv07FM5AGA="/>
-            <table:column id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_kommentaar" property="kommentaar" z="OcfahBQoMEAOtFIF6a2YYHe9IH8="/>
-            <table:column date="true" dateTimePattern="${vahtkonndPiiriloigul_kuni_date_format}" id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_kuni" property="kuni" z="RFI+QmhUBNP31TfsOSiSV4i4lBM="/>
             <table:column date="true" dateTimePattern="${vahtkonndPiiriloigul_muudetud_date_format}" id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_muudetud" property="muudetud" z="G+MyLP4ixGz+tgDOQyh1eRIWaQU="/>
+            <table:column id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_muutja" property="muutja" z="fKIA4SWMOicWmEUNLTdZziNiXUQ="/>
+            <table:column date="true" dateTimePattern="${vahtkonndPiiriloigul_suletud_date_format}" id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_suletud" property="suletud" z="NyJr4uvVYKZCFwSRTBmYMY6oDgM="/>
+            <table:column id="c_ee_itcollege_i377_entities_VahtkonndPiiriloigul_sulgeja" property="sulgeja" z="/Aa9iwKmJVmHcpZmAU5cmen4x8g="/>
         </table:table>
     </page:list>
 </div>

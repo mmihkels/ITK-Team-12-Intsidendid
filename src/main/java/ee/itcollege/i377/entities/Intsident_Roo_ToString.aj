@@ -15,6 +15,7 @@ privileged aspect Intsident_Roo_ToString {
         sb.append("GpsLongituud: ").append(getGpsLongituud()).append(", ");
         sb.append("IntsidendiLiik: ").append(getIntsidendiLiik()).append(", ");
         sb.append("IntsidentId: ").append(getIntsidentId()).append(", ");
+        sb.append("IsikIntsidendis: ").append(getIsikIntsidendis() == null ? "null" : getIsikIntsidendis().size()).append(", ");
         sb.append("Kirjeldus: ").append(getKirjeldus()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Kood: ").append(getKood()).append(", ");

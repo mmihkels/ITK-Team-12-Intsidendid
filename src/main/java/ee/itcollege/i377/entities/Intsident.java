@@ -22,7 +22,6 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
 
-
 /**
  * The persistent class for the INTSIDENT database table.
  * 
@@ -31,80 +30,64 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooEntity
-public class Intsident implements Serializable {
+public class Intsident extends HistoryHandlerEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="INTSIDENT_ID")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "INTSIDENT_ID")
 	private Long intsidentId;
 
-	private String avaja;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date avatud;
-
-	@Column(name="GPS_LATITUUD")
+	@Column(name = "GPS_LATITUUD")
 	private BigDecimal gpsLatituud;
 
-	@Column(name="GPS_LONGITUUD")
+	@Column(name = "GPS_LONGITUUD")
 	private BigDecimal gpsLongituud;
 
 	private String kirjeldus;
 
-	private String kommentaar;
-
 	private String kood;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-    private Date muudetud;
-
-	private String muutja;
 
 	private String nimetus;
 
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date suletud;
-
-	private String sulgeja;
-
-    @Temporal( TemporalType.DATE)
-	@Column(name="TOIMUMISE_ALGUS")
-    @DateTimeFormat(style="M-")
+	@Temporal(TemporalType.DATE)
+	@Column(name = "TOIMUMISE_ALGUS")
+	@DateTimeFormat(style = "M-")
 	private Date toimumiseAlgus;
 
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	@Column(name="TOIMUMISE_LOPP")
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(style = "M-")
+	@Column(name = "TOIMUMISE_LOPP")
 	private Date toimumiseLopp;
 
-	//bi-directional many-to-one association to IntsidendiLiik
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="INTSIDENDI_LIIK_ID")
+	// bi-directional many-to-one association to IntsidendiLiik
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "INTSIDENDI_LIIK_ID")
 	private IntsidendiLiik intsidendiLiik;
 
-	//bi-directional many-to-one association to Piiriloik
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="PIIRILOIK_ID")
+	// bi-directional many-to-one association to Piiriloik
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "PIIRILOIK_ID")
 	private Piiriloik piiriloik;
 
-	//bi-directional many-to-one association to ObjektIntsidendi
-	@OneToMany(mappedBy="intsident")
+	// bi-directional many-to-one association to IsikIntsidendi
+	@OneToMany(mappedBy = "intsident")
+	private Set<IsikIntsidendi> isikIntsidendis;
+
+	// bi-directional many-to-one association to ObjektIntsidendi
+	@OneToMany(mappedBy = "intsident")
 	private Set<ObjektIntsidendi> objektIntsidendis;
 
-	//bi-directional many-to-one association to PiirivalvurIntsidendi
-	@OneToMany(mappedBy="intsident")
+	// bi-directional many-to-one association to PiirivalvurIntsidendi
+	@OneToMany(mappedBy = "intsident")
 	private Set<PiirivalvurIntsidendi> piirivalvurIntsidendis;
 
-	//bi-directional many-to-one association to VahtkondIntsidendi
-	@OneToMany(mappedBy="intsident")
+	// bi-directional many-to-one association to VahtkondIntsidendi
+	@OneToMany(mappedBy = "intsident")
 	private Set<VahtkondIntsidendi> vahtkondIntsidendis;
 
-    public Intsident() {
-    }
+	public Intsident() {
+	}
 
 	public Long getIntsidentId() {
 		return this.intsidentId;
@@ -114,20 +97,18 @@ public class Intsident implements Serializable {
 		this.intsidentId = intsidentId;
 	}
 
-	public String getAvaja() {
-		return this.avaja;
+	/**
+	 * @return the isikIntsidendis
+	 */
+	public Set<IsikIntsidendi> getIsikIntsidendis() {
+		return isikIntsidendis;
 	}
 
-	public void setAvaja(String avaja) {
-		this.avaja = avaja;
-	}
-
-	public Date getAvatud() {
-		return this.avatud;
-	}
-
-	public void setAvatud(Date avatud) {
-		this.avatud = avatud;
+	/**
+	 * @param isikIntsidendis the isikIntsidendis to set
+	 */
+	public void setIsikIntsidendis(Set<IsikIntsidendi> isikIntsidendis) {
+		this.isikIntsidendis = isikIntsidendis;
 	}
 
 	public BigDecimal getGpsLatituud() {
@@ -154,14 +135,6 @@ public class Intsident implements Serializable {
 		this.kirjeldus = kirjeldus;
 	}
 
-	public String getKommentaar() {
-		return this.kommentaar;
-	}
-
-	public void setKommentaar(String kommentaar) {
-		this.kommentaar = kommentaar;
-	}
-
 	public String getKood() {
 		return this.kood;
 	}
@@ -170,44 +143,12 @@ public class Intsident implements Serializable {
 		this.kood = kood;
 	}
 
-	public Date getMuudetud() {
-		return this.muudetud;
-	}
-
-	public void setMuudetud(Date muudetud) {
-		this.muudetud = muudetud;
-	}
-
-	public String getMuutja() {
-		return this.muutja;
-	}
-
-	public void setMuutja(String muutja) {
-		this.muutja = muutja;
-	}
-
 	public String getNimetus() {
 		return this.nimetus;
 	}
 
 	public void setNimetus(String nimetus) {
 		this.nimetus = nimetus;
-	}
-
-	public Date getSuletud() {
-		return this.suletud;
-	}
-
-	public void setSuletud(Date suletud) {
-		this.suletud = suletud;
-	}
-
-	public String getSulgeja() {
-		return this.sulgeja;
-	}
-
-	public void setSulgeja(String sulgeja) {
-		this.sulgeja = sulgeja;
 	}
 
 	public Date getToimumiseAlgus() {
@@ -233,7 +174,7 @@ public class Intsident implements Serializable {
 	public void setIntsidendiLiik(IntsidendiLiik intsidendiLiik) {
 		this.intsidendiLiik = intsidendiLiik;
 	}
-	
+
 	public Piiriloik getPiiriloik() {
 		return this.piiriloik;
 	}
@@ -241,7 +182,7 @@ public class Intsident implements Serializable {
 	public void setPiiriloik(Piiriloik piiriloik) {
 		this.piiriloik = piiriloik;
 	}
-	
+
 	public Set<ObjektIntsidendi> getObjektIntsidendis() {
 		return this.objektIntsidendis;
 	}
@@ -249,21 +190,23 @@ public class Intsident implements Serializable {
 	public void setObjektIntsidendis(Set<ObjektIntsidendi> objektIntsidendis) {
 		this.objektIntsidendis = objektIntsidendis;
 	}
-	
+
 	public Set<PiirivalvurIntsidendi> getPiirivalvurIntsidendis() {
 		return this.piirivalvurIntsidendis;
 	}
 
-	public void setPiirivalvurIntsidendis(Set<PiirivalvurIntsidendi> piirivalvurIntsidendis) {
+	public void setPiirivalvurIntsidendis(
+			Set<PiirivalvurIntsidendi> piirivalvurIntsidendis) {
 		this.piirivalvurIntsidendis = piirivalvurIntsidendis;
 	}
-	
+
 	public Set<VahtkondIntsidendi> getVahtkondIntsidendis() {
 		return this.vahtkondIntsidendis;
 	}
 
-	public void setVahtkondIntsidendis(Set<VahtkondIntsidendi> vahtkondIntsidendis) {
+	public void setVahtkondIntsidendis(
+			Set<VahtkondIntsidendi> vahtkondIntsidendis) {
 		this.vahtkondIntsidendis = vahtkondIntsidendis;
 	}
-	
+
 }

@@ -30,7 +30,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooEntity
 @Table(name="PIIRIVALVUR_INTSIDENDIS")
-public class PiirivalvurIntsidendi implements Serializable {
+public class PiirivalvurIntsidendi extends HistoryHandlerEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -42,31 +42,12 @@ public class PiirivalvurIntsidendi implements Serializable {
     @DateTimeFormat(style="M-")
 	private Date alates;
 
-	private String avaja;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date avatud;
-
 	private String kirjeldus;
-
-	private String kommentaar;
 
     @Temporal( TemporalType.DATE)
     @DateTimeFormat(style="M-")
 	private Date kuni;
 
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date muudetud;
-
-	private String muutja;
-
-    @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
-	private Date suletud;
-
-	private String sulgeja;
 
 	//bi-directional many-to-one association to Intsident
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -102,21 +83,6 @@ public class PiirivalvurIntsidendi implements Serializable {
 		this.alates = alates;
 	}
 
-	public String getAvaja() {
-		return this.avaja;
-	}
-
-	public void setAvaja(String avaja) {
-		this.avaja = avaja;
-	}
-
-	public Date getAvatud() {
-		return this.avatud;
-	}
-
-	public void setAvatud(Date avatud) {
-		this.avatud = avatud;
-	}
 
 	public String getKirjeldus() {
 		return this.kirjeldus;
@@ -126,13 +92,6 @@ public class PiirivalvurIntsidendi implements Serializable {
 		this.kirjeldus = kirjeldus;
 	}
 
-	public String getKommentaar() {
-		return this.kommentaar;
-	}
-
-	public void setKommentaar(String kommentaar) {
-		this.kommentaar = kommentaar;
-	}
 
 	public Date getKuni() {
 		return this.kuni;
@@ -140,38 +99,6 @@ public class PiirivalvurIntsidendi implements Serializable {
 
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
-	}
-
-	public Date getMuudetud() {
-		return this.muudetud;
-	}
-
-	public void setMuudetud(Date muudetud) {
-		this.muudetud = muudetud;
-	}
-
-	public String getMuutja() {
-		return this.muutja;
-	}
-
-	public void setMuutja(String muutja) {
-		this.muutja = muutja;
-	}
-
-	public Date getSuletud() {
-		return this.suletud;
-	}
-
-	public void setSuletud(Date suletud) {
-		this.suletud = suletud;
-	}
-
-	public String getSulgeja() {
-		return this.sulgeja;
-	}
-
-	public void setSulgeja(String sulgeja) {
-		this.sulgeja = sulgeja;
 	}
 
 	public Intsident getIntsident() {

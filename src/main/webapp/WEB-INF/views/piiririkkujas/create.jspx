@@ -17,6 +17,7 @@
         <field:datetime dateTimePattern="${piiririkkuja_synniaeg_date_format}" field="synniaeg" id="c_ee_itcollege_i377_entities_Piiririkkuja_synniaeg" z="FNiAKxss45FoXSAj6uiHPACIS5M="/>
         <field:select field="objekt" id="c_ee_itcollege_i377_entities_Piiririkkuja_objekt" itemValue="objektId" items="${objekts}" path="/objekts" z="Dk4RiS8cMZ/FUaJSqkqcdGXTruM="/>
         <field:simple field="kodakondsuses" id="c_ee_itcollege_i377_entities_Piiririkkuja_kodakondsuses" messageCode="entity_reference_not_managed" messageCodeAttribute="Kodakondsus" z="ww3wHq/8pnRehUdGOJxsA0+VbA4="/>
+        <field:simple field="isikIntsidendis" id="c_ee_itcollege_i377_entities_Piiririkkuja_isikIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Isik Intsidendi" z="nk6RyB2j+1JPtYGqhgHwQu2pk4M="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_entities_Piiririkkuja" render="${not empty dependencies}" z="fziuBCxJ9RXlyCgtHzTM+H7Dq9E="/>
 </div>

@@ -5,26 +5,23 @@ package ee.itcollege.i377.entities;
 
 import java.lang.String;
 
-privileged aspect Piiririkkuja_Roo_ToString {
+privileged aspect IsikIntsidendi_Roo_ToString {
     
-    public String Piiririkkuja.toString() {
+    public String IsikIntsidendi.toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
-        sb.append("Eesnimi: ").append(getEesnimi()).append(", ");
-        sb.append("IsikIntsidendis: ").append(getIsikIntsidendis() == null ? "null" : getIsikIntsidendis().size()).append(", ");
-        sb.append("Isikukood: ").append(getIsikukood()).append(", ");
-        sb.append("Kodakondsuses: ").append(getKodakondsuses() == null ? "null" : getKodakondsuses().size()).append(", ");
+        sb.append("Intsident: ").append(getIntsident()).append(", ");
+        sb.append("IsikIntsidendisId: ").append(getIsikIntsidendisId()).append(", ");
+        sb.append("Kirjeldus: ").append(getKirjeldus()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
+        sb.append("Kuni: ").append(getKuni()).append(", ");
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
         sb.append("Muutja: ").append(getMuutja()).append(", ");
-        sb.append("Objekt: ").append(getObjekt()).append(", ");
-        sb.append("PerekNimi: ").append(getPerekNimi()).append(", ");
-        sb.append("PiiririkkujaId: ").append(getPiiririkkujaId()).append(", ");
-        sb.append("Sugu: ").append(getSugu()).append(", ");
+        sb.append("Piiririkkuja: ").append(getPiiririkkuja()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Synniaeg: ").append(getSynniaeg()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

@@ -4,4 +4,16 @@
     <definition extends="default" name="intsidentreg/index">
         <put-attribute name="body" value="/WEB-INF/views/intsidentreg/index.jspx"/>
     </definition>
+<definition extends="default" name="intsidentreg/list">
+        <put-attribute name="body" value="/WEB-INF/views/intsidentreg/list.jspx"/>
+    </definition>
+<definition extends="default" name="intsidentreg/show">
+        <put-attribute name="body" value="/WEB-INF/views/intsidentreg/show.jspx"/>
+    </definition>
+<definition extends="default" name="intsidentreg/create">
+        <put-attribute name="body" value="/WEB-INF/views/intsidentreg/create.jspx"/>
+    </definition>
+<definition extends="default" name="intsidentreg/update">
+        <put-attribute name="body" value="/WEB-INF/views/intsidentreg/update.jspx"/>
+    </definition>
 </tiles-definitions>

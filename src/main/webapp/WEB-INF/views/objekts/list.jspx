@@ -6,10 +6,10 @@
         <table:table data="${objekts}" id="l_ee_itcollege_i377_entities_Objekt" path="/objekts" typeIdFieldName="objektId" z="3vwYfX5S7o7XGsXn0tYJj3lUZ9Q=">
             <table:column id="c_ee_itcollege_i377_entities_Objekt_avaja" property="avaja" z="qOoi5ofbsnISwLhfBibfXtwnt28="/>
             <table:column date="true" dateTimePattern="${objekt_avatud_date_format}" id="c_ee_itcollege_i377_entities_Objekt_avatud" property="avatud" z="D9/Y9OOPJrd712LJSawsnIDjMw8="/>
-            <table:column id="c_ee_itcollege_i377_entities_Objekt_kommentaar" property="kommentaar" z="xNK169bVI3iw7zi+8qXRHBy8hhk="/>
             <table:column date="true" dateTimePattern="${objekt_muudetud_date_format}" id="c_ee_itcollege_i377_entities_Objekt_muudetud" property="muudetud" z="DibGnO/a5PWE2Zy3/4vs+pUzEqo="/>
             <table:column id="c_ee_itcollege_i377_entities_Objekt_muutja" property="muutja" z="mZBgfjo4KgsutAoe16+HEo5PKEQ="/>
-            <table:column id="c_ee_itcollege_i377_entities_Objekt_nimetus" property="nimetus" z="AwbLXuhKPON7i8+LaKJ49fFdAj8="/>
+            <table:column date="true" dateTimePattern="${objekt_suletud_date_format}" id="c_ee_itcollege_i377_entities_Objekt_suletud" property="suletud" z="v6LIuCaAQ8h6j7iM91tnIcDuxNM="/>
+            <table:column id="c_ee_itcollege_i377_entities_Objekt_sulgeja" property="sulgeja" z="5P2hvn03RKQ9OKUfNQzuqVuNzwo="/>
         </table:table>
     </page:list>
 </div>

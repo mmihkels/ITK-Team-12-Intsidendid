@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div 
+        xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:jsp="http://java.sun.com/JSP/Page" 
+        xmlns:spring="http://www.springframework.org/tags"
+        version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <h3>Intsident ${intsident.getKood()} - ${intsident.getPiiriloik().getNimetus()} - ${intsident.getNimetus()}</h3>
+    <div>
+        <table style="border-style:none">
+            <tr>
+                <td width="50%" style="border-style:none;vertical-align:top">
+                    <table>
+                        <tr>
+                            <th>Isikud</th>
+                        </tr>
+                        <c:forEach items="${intsident.getIsikIntsidendis()}" var="person">
+                            <tr>
+                                <td>
+                                    ${person.getPiiririkkuja().getEesnimi()}
+                                    ${person.getPiiririkkuja().getPerek_nimi()}
+                                    <input type="button" value="Eemalda" onClick="if(confirm('Kustutan isiku ${person.getPiiririkkuja().getEesnimi()} ${person.getPiiririkkuja().getPerek_nimi()} intsidendist?')){window.location='?object=isik,${person.getIsik_intsidendis_ID()}'}" style="float:right" />
+                                    <input type="button" value="Info" onClick="alert('Pole implementeeritud')" style="float:right" />
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <input type="button" value="Lisa" onClick="window.location='../../isikintsidendises?form'" style="float:right;margin-top:7px" />
+                </td>
+                <td width="50%" style="border-style:none;vertical-align:top">
+                    <table>
+                        <tr>
+                            <th>Objektid</th>
+                        </tr>
+                        <c:forEach items="${intsident.getObjektsIntsidendis()}" var="objekt">
+                            <tr>
+                                <td>
+                                    ${objekt.getObjekt().getNimetus()}
+	                                <input type="button" value="Eemalda" onClick="if(confirm('Kustutan objekti ${objekt.getObjekt().getNimetus()} intsidendist?')){window.location='?object=objekt,${objekt.getObjekt_intsidendis_ID()}'}" style="float:right" />
+	                                <input type="button" value="Info" onClick="alert('Pole implementeeritud')" style="float:right" />
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <input type="button" value="Lisa" onClick="window.location='../../objektintsidendises?form'" style="float:right;margin-top:7px" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="margin-top:12px">
+        <table style="border-style:none">
+            <tr>
+                <td width="50%" style="border-style:none;vertical-align:top">
+                    <table>
+                        <tr>
+                            <th>Vahtkond</th>
+                        </tr>
+                        <c:forEach items="${intsident.getVahtkondIntsidendis()}" var="vahtkond">
+                            <tr>
+                                <td>
+                                    ${vahtkond.getVahtkond().getNimetus()}
+	                                <input type="button" value="Eemalda" onClick="if(confirm('Kustutan vahtkonna ${vahtkond.getVahtkond().getNimetus()} intsidendist?')){window.location='?object=vahtkond,${vahtkond.getVahtkond_intsidendis_ID()}'}" style="float:right" />
+	                                <input type="button" value="Info" onClick="window.location='../../vahtkondintsidendises/${vahtkond.getVahtkond_intsidendis_ID()}?form'" style="float:right" />
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <input type="button" value="Lisa" onClick="window.location='../../vahtkondintsidendises?form'" style="float:right;margin-top:7px" />
+                </td>
+                <td width="50%" style="border-style:none;vertical-align:top">
+                    <table>
+                        <tr>
+                            <th>Piirivalvurid</th>
+                        </tr>
+                        <c:forEach items="${intsident.getPiirivalvurIntsidendis()}" var="valvur">
+                            <tr>
+                                <td>
+                                    ${valvur.getPiirivalvur().getEesnimed()}
+                                    ${valvur.getPiirivalvur().getPerekonnanimi()}
+                                    <input type="button" value="Eemalda" onClick="if(confirm('Kustutan piirivalvuri ${valvur.getPiirivalvur().getEesnimed()} ${valvur.getPiirivalvur().getPerekonnanimi()} intsidendist?')){window.location='?object=valvur,${valvur.getPiirivalvur_intsidendis_ID()}'}" style="float:right" />
+                                    <input type="button" value="Info" onClick="alert('Pole implementeeritud')" style="float:right" />
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <input type="button" value="Lisa" onClick="window.location='../../piirivalvurintsidendises?form'" style="float:right;margin-top:7px" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="margin-top:30px;padding-bottom:10px">
+        <input type="button" value="Tagasi" onClick="window.location='../../intidentpiiril/index'" style="float:right" />
+    </div>
+</div>

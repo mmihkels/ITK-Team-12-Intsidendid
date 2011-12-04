@@ -6,7 +6,6 @@
         <field:display date="true" dateTimePattern="${vahtkondIntsidendi_alates_date_format}" field="alates" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_alates" object="${vahtkondintsidendi}" z="7N9E6XjdqQspKYUFcA9hCUaTI4g="/>
         <field:display field="avaja" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_avaja" object="${vahtkondintsidendi}" z="WbGl0cQyMuQcSqKYi/bD+YDWvoQ="/>
         <field:display date="true" dateTimePattern="${vahtkondIntsidendi_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_avatud" object="${vahtkondintsidendi}" z="3xJ4bLZ5RHXArI/6OUkxPzIL8xs="/>
-        <field:display field="kirjeldus" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_kirjeldus" object="${vahtkondintsidendi}" z="1+mdwA9R+5HYvzmyuncGltQFxpo="/>
         <field:display field="kommentaar" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_kommentaar" object="${vahtkondintsidendi}" z="Cc6fp8IMbJhCvim/Gq/0qAtVCPY="/>
         <field:display date="true" dateTimePattern="${vahtkondIntsidendi_kuni_date_format}" field="kuni" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_kuni" object="${vahtkondintsidendi}" z="s/VDQalyRO/ohoSE/3ZLjL9DToI="/>
         <field:display date="true" dateTimePattern="${vahtkondIntsidendi_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_muudetud" object="${vahtkondintsidendi}" z="EpXbZ4dgwUDTRkTLz8xPoARM6ok="/>
@@ -15,5 +14,6 @@
         <field:display field="sulgeja" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_sulgeja" object="${vahtkondintsidendi}" z="YZ0XiQSrIaLYSlB1HRGdzcv0/gU="/>
         <field:display field="intsident" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_intsident" object="${vahtkondintsidendi}" z="7/6ZDaPyqRyT9rW3MNBdSLKUySM="/>
         <field:display field="vahtkond" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_vahtkond" object="${vahtkondintsidendi}" z="TBcd1shnHESh2GZmBV7CqNR1w9U="/>
+        <field:display field="kirjeldus" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_kirjeldus" object="${vahtkondintsidendi}" z="1+mdwA9R+5HYvzmyuncGltQFxpo="/>
     </page:show>
 </div>
