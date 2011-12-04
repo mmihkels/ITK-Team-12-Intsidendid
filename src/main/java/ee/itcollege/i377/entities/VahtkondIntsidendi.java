@@ -59,7 +59,7 @@ public class VahtkondIntsidendi implements Serializable {
 	private Date kuni;
 
     @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="F-")
+    @DateTimeFormat(style="M-")
 	private Date muudetud;
 
 	private String muutja;

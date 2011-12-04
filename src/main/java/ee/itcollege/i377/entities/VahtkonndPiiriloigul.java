@@ -55,6 +55,7 @@ public class VahtkonndPiiriloigul implements Serializable {
 	private Date kuni;
 
     @Temporal( TemporalType.DATE)
+    @DateTimeFormat(style="M-")
 	private Date muudetud;
 
 	private String muutja;

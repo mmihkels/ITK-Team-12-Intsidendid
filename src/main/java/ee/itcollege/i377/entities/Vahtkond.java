@@ -65,7 +65,7 @@ public class Vahtkond implements Serializable {
 	private int piiripunktId;
 
     @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="F-")
+    @DateTimeFormat(style="M-")
 	private Date suletud;
 
 	private String sulgeja;
