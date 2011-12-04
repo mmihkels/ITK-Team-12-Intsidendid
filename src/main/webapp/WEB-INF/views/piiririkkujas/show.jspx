@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_i377_entities_Piiririkkuja" object="${piiririkkuja}" path="/piiririkkujas" z="fW4+mrHBQjjDnsACBuk6PLLHqEQ=">
+        <field:display field="avaja" id="s_ee_itcollege_i377_entities_Piiririkkuja_avaja" object="${piiririkkuja}" z="DI0fd7mrOur2ZJHUSgAW47P/2AU="/>
+        <field:display date="true" dateTimePattern="${piiririkkuja_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_entities_Piiririkkuja_avatud" object="${piiririkkuja}" z="3BymCs4NkJQoZUFN+Z8T98U1mp8="/>
+        <field:display field="eesnimi" id="s_ee_itcollege_i377_entities_Piiririkkuja_eesnimi" object="${piiririkkuja}" z="gnq0ElcxHZZ7VHSiqrTZtdd9Sdg="/>
+        <field:display field="isikukood" id="s_ee_itcollege_i377_entities_Piiririkkuja_isikukood" object="${piiririkkuja}" z="1ZtmDWymyf/FaF0PpN/iDdo55yo="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_i377_entities_Piiririkkuja_kommentaar" object="${piiririkkuja}" z="r/fM8wABtHta5+AOpWXvymWiMlw="/>
+        <field:display date="true" dateTimePattern="${piiririkkuja_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_entities_Piiririkkuja_muudetud" object="${piiririkkuja}" z="rLalg6xoap6Cb5fc3RPcud6kKEI="/>
+        <field:display field="muutja" id="s_ee_itcollege_i377_entities_Piiririkkuja_muutja" object="${piiririkkuja}" z="5QyvO13Cqq3W4uKqiWWwmMvcqzY="/>
+        <field:display field="perekNimi" id="s_ee_itcollege_i377_entities_Piiririkkuja_perekNimi" object="${piiririkkuja}" z="iYrBFcG8X4PKLW/YZIrdRgdttds="/>
+        <field:display field="sugu" id="s_ee_itcollege_i377_entities_Piiririkkuja_sugu" object="${piiririkkuja}" z="ULs+EE2Rm6WqQX1NP91Dngo5/wI="/>
+        <field:display date="true" dateTimePattern="${piiririkkuja_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_entities_Piiririkkuja_suletud" object="${piiririkkuja}" z="2lfQqeprICoJ5w+5Xlx+XJ2xT5A="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_i377_entities_Piiririkkuja_sulgeja" object="${piiririkkuja}" z="dTb2sApxKHB33QGETwAHBDYGGhI="/>
+        <field:display date="true" dateTimePattern="${piiririkkuja_synniaeg_date_format}" field="synniaeg" id="s_ee_itcollege_i377_entities_Piiririkkuja_synniaeg" object="${piiririkkuja}" z="fC+M7LLfwydxEigHrLIWCF+3Wk0="/>
+        <field:display field="objekt" id="s_ee_itcollege_i377_entities_Piiririkkuja_objekt" object="${piiririkkuja}" z="gFzmIMpbbadpfPE2ZMu/i8lc35c="/>
+    </page:show>
+</div>

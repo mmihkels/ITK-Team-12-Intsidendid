@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_i377_entities_VahtkondIntsidendi" object="${vahtkondintsidendi}" path="/vahtkondintsidendis" z="pWeDnBlvhezVkuCzC48PNJj7aeU=">
+        <field:display date="true" dateTimePattern="${vahtkondIntsidendi_alates_date_format}" field="alates" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_alates" object="${vahtkondintsidendi}" z="7N9E6XjdqQspKYUFcA9hCUaTI4g="/>
+        <field:display field="avaja" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_avaja" object="${vahtkondintsidendi}" z="WbGl0cQyMuQcSqKYi/bD+YDWvoQ="/>
+        <field:display date="true" dateTimePattern="${vahtkondIntsidendi_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_avatud" object="${vahtkondintsidendi}" z="3xJ4bLZ5RHXArI/6OUkxPzIL8xs="/>
+        <field:display field="kirjeldus" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_kirjeldus" object="${vahtkondintsidendi}" z="1+mdwA9R+5HYvzmyuncGltQFxpo="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_kommentaar" object="${vahtkondintsidendi}" z="Cc6fp8IMbJhCvim/Gq/0qAtVCPY="/>
+        <field:display date="true" dateTimePattern="${vahtkondIntsidendi_kuni_date_format}" field="kuni" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_kuni" object="${vahtkondintsidendi}" z="s/VDQalyRO/ohoSE/3ZLjL9DToI="/>
+        <field:display date="true" dateTimePattern="${vahtkondIntsidendi_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_muudetud" object="${vahtkondintsidendi}" z="EpXbZ4dgwUDTRkTLz8xPoARM6ok="/>
+        <field:display field="muutja" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_muutja" object="${vahtkondintsidendi}" z="SEi7dQVm35Iags71T1koYlUQG1o="/>
+        <field:display date="true" dateTimePattern="${vahtkondIntsidendi_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_suletud" object="${vahtkondintsidendi}" z="WJ2+aef3+vnUYNK31rCRk64l/VU="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_sulgeja" object="${vahtkondintsidendi}" z="YZ0XiQSrIaLYSlB1HRGdzcv0/gU="/>
+        <field:display field="intsident" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_intsident" object="${vahtkondintsidendi}" z="7/6ZDaPyqRyT9rW3MNBdSLKUySM="/>
+        <field:display field="vahtkond" id="s_ee_itcollege_i377_entities_VahtkondIntsidendi_vahtkond" object="${vahtkondintsidendi}" z="TBcd1shnHESh2GZmBV7CqNR1w9U="/>
+    </page:show>
+</div>

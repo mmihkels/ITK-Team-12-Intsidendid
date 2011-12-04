@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_intsidendiliik" z="5sFVQws8nDxUQTwy8b2OF4yOuJk=">
+            <menu:item id="i_intsidendiliik_new" messageCode="global_menu_new" url="/intsidendiliiks?form" z="bisLYTttGHOJhpb6iPYuVsXvH6Q="/>
+            <menu:item id="i_intsidendiliik_list" messageCode="global_menu_list" url="/intsidendiliiks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Soe3eFPh8EjS9q1wA0v6lbxicEA="/>
+        </menu:category>
+        <menu:category id="c_piirivalvur" z="sGXZ4GwwZtbGylRvbUXZI4kvKZs=">
+            <menu:item id="i_piirivalvur_new" messageCode="global_menu_new" url="/piirivalvurs?form" z="HRvdB2pvoLqTAPhuPDRzOsT/HpE="/>
+            <menu:item id="i_piirivalvur_list" messageCode="global_menu_list" url="/piirivalvurs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="sy0TKZS9L9wBaTTNXcAXixPtYHw="/>
+        </menu:category>
+        <menu:category id="c_piirivalvurintsidendi" z="/OoHwRXEYkNw5eNlg6EqcydZTJs=">
+            <menu:item id="i_piirivalvurintsidendi_new" messageCode="global_menu_new" url="/piirivalvurintsidendis?form" z="O/HW3VCwpHs6cOgs4Lc5I8myLxc="/>
+            <menu:item id="i_piirivalvurintsidendi_list" messageCode="global_menu_list" url="/piirivalvurintsidendis?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fr2/ZTxR2KkC1YqPqlJZVxVwwe8="/>
+        </menu:category>
+        <menu:category id="c_vahtkondintsidendi" z="gj1wqFak7zs9f+ky1VOpa39pUfA=">
+            <menu:item id="i_vahtkondintsidendi_new" messageCode="global_menu_new" url="/vahtkondintsidendis?form" z="vyxOysTmY8uRYGJAGhzs9LB7+7o="/>
+            <menu:item id="i_vahtkondintsidendi_list" messageCode="global_menu_list" url="/vahtkondintsidendis?page=1&amp;size=${empty param.size ? 10 : param.size}" z="C+wXWVUIEsXS9mYwEZbkTqYW3HU="/>
+        </menu:category>
+        <menu:category id="c_vahtkond" z="c/riL356fHQk+/mY3ExRqrVhU/4=">
+            <menu:item id="i_vahtkond_new" messageCode="global_menu_new" url="/vahtkonds?form" z="bvt9LhUzxYB+1+sxarsHufGq1po="/>
+            <menu:item id="i_vahtkond_list" messageCode="global_menu_list" url="/vahtkonds?page=1&amp;size=${empty param.size ? 10 : param.size}" z="yjK8dn1Lr/RZ1HbVVrZdpoTkXKI="/>
+        </menu:category>
+        <menu:category id="c_vahtkonndpiiriloigul" z="1IPVS0jUYJ5xjMpv8MZqM55QRxc=">
+            <menu:item id="i_vahtkonndpiiriloigul_new" messageCode="global_menu_new" url="/vahtkonndpiiriloiguls?form" z="tTwQo2Pm8T53OBbqOtNB5Xk46lI="/>
+            <menu:item id="i_vahtkonndpiiriloigul_list" messageCode="global_menu_list" url="/vahtkonndpiiriloiguls?page=1&amp;size=${empty param.size ? 10 : param.size}" z="wDLWNd7R5DiLvRjzHvQFt/+Pwww="/>
+        </menu:category>
+        <menu:category id="c_piiriloik" z="qhuVfw5dEZq1X5uopy1zJqUFCxI=">
+            <menu:item id="i_piiriloik_new" messageCode="global_menu_new" url="/piiriloiks?form" z="ASXtPkBwQsEIDr9VmWdhkICO72k="/>
+            <menu:item id="i_piiriloik_list" messageCode="global_menu_list" url="/piiriloiks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="1aNF7PGqbswkfIuw3fVpMrLzk+4="/>
+        </menu:category>
+        <menu:category id="c_intsident" z="kwTJaHl5VF4ahaSorWL0R46/LTM=">
+            <menu:item id="i_intsident_new" messageCode="global_menu_new" url="/intsidents?form" z="PoAgtQFn6iVS32mKUjyI3kM2khc="/>
+            <menu:item id="i_intsident_list" messageCode="global_menu_list" url="/intsidents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kHeRRwTb9AVfs3A2YRAPSkAX64k="/>
+        </menu:category>
+        <menu:category id="c_objektintsidendi" z="xyRExt15T3udXQv9DLAGyZ46l24=">
+            <menu:item id="i_objektintsidendi_new" messageCode="global_menu_new" url="/objektintsidendis?form" z="zaY+DYHjCjItk3QqXxq38WbPsCY="/>
+            <menu:item id="i_objektintsidendi_list" messageCode="global_menu_list" url="/objektintsidendis?page=1&amp;size=${empty param.size ? 10 : param.size}" z="16uUdRn4C2BgHFq0k9n7ZVRwkVA="/>
+        </menu:category>
+        <menu:category id="c_objekt" z="rjkh6O+TVNXzCjedLp6PFqZolxI=">
+            <menu:item id="i_objekt_new" messageCode="global_menu_new" url="/objekts?form" z="eBl8qE0jAB9Ygiu3upBZTum4iDs="/>
+            <menu:item id="i_objekt_list" messageCode="global_menu_list" url="/objekts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="yMhHoW41esUSFoV8U0HE/swwewU="/>
+        </menu:category>
+        <menu:category id="c_piiririkkuja" z="JMlBoa5Zk33SRu+AsyTwMO+66T0=">
+            <menu:item id="i_piiririkkuja_new" messageCode="global_menu_new" url="/piiririkkujas?form" z="SCaVFfGzCq9PMaYCiefQM+0Hir8="/>
+            <menu:item id="i_piiririkkuja_list" messageCode="global_menu_list" url="/piiririkkujas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZtbTlYCoTxzaDW+jM5SusvFZgK8="/>
+        </menu:category>
+        <menu:category id="c_kodakondsus" z="4JGd7QfPC57dvBfG3D1b8l5qNx0=">
+            <menu:item id="i_kodakondsus_new" messageCode="global_menu_new" url="/kodakondsuses?form" z="fGezh5OwAiaWWweASKGTxIT+7mw="/>
+            <menu:item id="i_kodakondsus_list" messageCode="global_menu_list" url="/kodakondsuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="czyfxlTBzOUiH5MaOthZMPH8mHM="/>
+        </menu:category>
+        <menu:category id="c_riik" z="82KnxXQ8F1G/xroEWq4JxRs9sbA=">
+            <menu:item id="i_riik_new" messageCode="global_menu_new" url="/riiks?form" z="Osrc4MHDGnzI9KsezJA/j2RcsM4="/>
+            <menu:item id="i_riik_list" messageCode="global_menu_list" url="/riiks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="dnLLIm4aMreomSiFZOHLQa12gFE="/>
+        </menu:category>
+    </menu:menu>
+</div>
