@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_i377_entities_Riik" object="${riik}" path="/riiks" z="KCq2lz2CuPwf51l9x81X3t3sUfI=">
+        <field:display field="ansiKood" id="s_ee_itcollege_i377_entities_Riik_ansiKood" object="${riik}" z="/hc2FIvbfURfdxtUiJY93npKSOI="/>
+        <field:display field="avaja" id="s_ee_itcollege_i377_entities_Riik_avaja" object="${riik}" z="SYDxylt6vQ6+FD6ANo44DEJz268="/>
+        <field:display date="true" dateTimePattern="${riik_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_entities_Riik_avatud" object="${riik}" z="cWsjSWkmazkT49YVlCNZUNvcyWQ="/>
+        <field:display field="isoKood" id="s_ee_itcollege_i377_entities_Riik_isoKood" object="${riik}" z="r8N94Ec/rm7t+G/TiVMmQWPOPXg="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_i377_entities_Riik_kommentaar" object="${riik}" z="mwDBpbVfkKNE68I9AAjWaEnPHhM="/>
+        <field:display date="true" dateTimePattern="${riik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_entities_Riik_muudetud" object="${riik}" z="Z4Ukid+bbgcaNWBj9qFiPeHotMs="/>
+        <field:display field="muutja" id="s_ee_itcollege_i377_entities_Riik_muutja" object="${riik}" z="vq6EEveJph0KAd7qlNVsUwkj9VE="/>
+        <field:display date="true" dateTimePattern="${riik_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_entities_Riik_suletud" object="${riik}" z="MSSwMLe8RTgCCngj32g7jhlPH/E="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_i377_entities_Riik_sulgeja" object="${riik}" z="+noBYuLV9Rjc9gGcX5/HJ/kn24w="/>
+    </page:show>
+</div>

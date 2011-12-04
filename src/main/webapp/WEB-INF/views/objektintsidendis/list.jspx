@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_i377_entities_ObjektIntsidendi" items="${objektintsidendis}" z="R6wDeXgjOZxuXqDapxFLWylYnWc=">
+        <table:table data="${objektintsidendis}" id="l_ee_itcollege_i377_entities_ObjektIntsidendi" path="/objektintsidendis" typeIdFieldName="objektIntsidendisId" z="DdgOqQTe/vBMRSVICtUHwvVpcuo=">
+            <table:column date="true" dateTimePattern="${objektIntsidendi_alates_date_format}" id="c_ee_itcollege_i377_entities_ObjektIntsidendi_alates" property="alates" z="eZ5+RumgSr8lSskFwUay0Yv/jhQ="/>
+            <table:column id="c_ee_itcollege_i377_entities_ObjektIntsidendi_avaja" property="avaja" z="+tJehzoks5Mf+Z3YiNlUiIbMtYs="/>
+            <table:column date="true" dateTimePattern="${objektIntsidendi_avatud_date_format}" id="c_ee_itcollege_i377_entities_ObjektIntsidendi_avatud" property="avatud" z="RSWY6T/N/EbIobRpAdF2wjqRm6I="/>
+            <table:column id="c_ee_itcollege_i377_entities_ObjektIntsidendi_kirjeldus" property="kirjeldus" z="bQaayhatcTOOHck75vhdfN9Mqgs="/>
+            <table:column id="c_ee_itcollege_i377_entities_ObjektIntsidendi_kommentaar" property="kommentaar" z="fb6asZHpFfDGtJiJEn8pQbDe5B0="/>
+            <table:column date="true" dateTimePattern="${objektIntsidendi_kuni_date_format}" id="c_ee_itcollege_i377_entities_ObjektIntsidendi_kuni" property="kuni" z="Im5mUZvXFOrsAzoG0aDEZWsGhhE="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_i377_entities_IntsidendiLiik" idField="intsidendiLiikId" modelAttribute="intsidendiLiik" path="/intsidendiliiks" versionField="Version" z="pz0/ZAoDHfdJPgAaqHZVBySNEcM=">
+        <field:input field="avaja" id="c_ee_itcollege_i377_entities_IntsidendiLiik_avaja" z="B/XV4XUO5RVh9+VrUAEj+NAl91k="/>
+        <field:datetime dateTimePattern="${intsidendiLiik_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_entities_IntsidendiLiik_avatud" z="CEwSfjFRG54Rn+1yer67zzWLG38="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_i377_entities_IntsidendiLiik_kommentaar" z="eGCJrT23BnDc1fwYaJkoB0OV1xA="/>
+        <field:input field="kood" id="c_ee_itcollege_i377_entities_IntsidendiLiik_kood" z="BywlCs8uyidRhcwKEF+2vnDijZw="/>
+        <field:datetime dateTimePattern="${intsidendiLiik_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_entities_IntsidendiLiik_muudetud" z="WKjI72wuJRclTRHUN3XWe18FpOc="/>
+        <field:input field="muutja" id="c_ee_itcollege_i377_entities_IntsidendiLiik_muutja" z="34ppCK4R6Z3EEjJ7IMio8UoplTQ="/>
+        <field:input field="nimetus" id="c_ee_itcollege_i377_entities_IntsidendiLiik_nimetus" z="g7JTfNeOe2SwNgLDTxbrS2tP/Jg="/>
+        <field:datetime dateTimePattern="${intsidendiLiik_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_entities_IntsidendiLiik_suletud" z="Y44ZWXSDI0edz3MQB7gE/RBhxfE="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_i377_entities_IntsidendiLiik_sulgeja" z="Thh4b50cUGda3WvCfM15rF7JOoQ="/>
+        <field:simple field="intsidents" id="c_ee_itcollege_i377_entities_IntsidendiLiik_intsidents" messageCode="entity_reference_not_managed" messageCodeAttribute="Intsident" z="SKinvRCqkodIBD3M3js8stwGbow="/>
+    </form:update>
+</div>

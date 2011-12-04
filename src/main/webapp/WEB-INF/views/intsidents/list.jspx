@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_i377_entities_Intsident" items="${intsidents}" z="RWp5qkfg3HeUpFbTbPRBr0IVw38=">
+        <table:table data="${intsidents}" id="l_ee_itcollege_i377_entities_Intsident" path="/intsidents" typeIdFieldName="intsidentId" z="6eiHK6HcEQ5AYurycsv7elxovxk=">
+            <table:column id="c_ee_itcollege_i377_entities_Intsident_avaja" property="avaja" z="gQH/REFoybG4zuxzYMGuOa07sio="/>
+            <table:column date="true" dateTimePattern="${intsident_avatud_date_format}" id="c_ee_itcollege_i377_entities_Intsident_avatud" property="avatud" z="9DJ83VusPgUAGFYChxykE3WyEgg="/>
+            <table:column id="c_ee_itcollege_i377_entities_Intsident_gpsLatituud" property="gpsLatituud" z="RHVck4EwRSKupFFzwQ6w35CSGME="/>
+            <table:column id="c_ee_itcollege_i377_entities_Intsident_gpsLongituud" property="gpsLongituud" z="r1qdWbVsQOMucgZVtKxWu3vpDK8="/>
+            <table:column id="c_ee_itcollege_i377_entities_Intsident_kirjeldus" property="kirjeldus" z="lOnTYAh4gIBlY90NE/GCYXoQGL8="/>
+            <table:column id="c_ee_itcollege_i377_entities_Intsident_kommentaar" property="kommentaar" z="O0p73fVPyBy4YNniPj/uLu9y4ws="/>
+        </table:table>
+    </page:list>
+</div>
