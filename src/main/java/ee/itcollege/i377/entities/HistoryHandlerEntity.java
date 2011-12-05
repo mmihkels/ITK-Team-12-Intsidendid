@@ -12,6 +12,7 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+
 @MappedSuperclass
 public class HistoryHandlerEntity {
 	
